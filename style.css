@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.header h2 {
+    color: gray;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#dark-mode {
+    display: none;
+}
+
+.toggle-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#dark-mode:checked ~ .main-container {
+    background-color: #222;
+    color: white;
+}
+
+#dark-mode:checked ~ .main-container .card {
+    background-color: #333;
+    border-color: #555;
+}
+
+#dark-mode:checked ~ .main-container .header h2 {
+    color: lightgray;
+}
+
+#dark-mode:checked ~ .main-container a {
+    color: lightblue;
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
