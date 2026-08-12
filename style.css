@@ -33,6 +33,7 @@ body {
     height: 150px;
     border-radius: 50%;
     border: 3px solid black;
+    object-fit: cover;
 }
 
 .header h2 {
@@ -73,6 +74,56 @@ a:hover {
     font-weight: bold;
 }
 
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.skill-tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #bbb;
+}
+
+.project-card h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.project-card p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+
 #dark-mode:checked ~ .main-container {
     background-color: #222;
     color: white;
@@ -90,6 +141,22 @@ a:hover {
 #dark-mode:checked ~ .main-container a {
     color: lightblue;
 }
+
+#dark-mode:checked ~ .main-container .skill-tag {
+    background-color: #555;
+    color: #fff;
+}
+
+
+#dark-mode:checked ~ .main-container .project-card {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+#dark-mode:checked ~ .main-container .project-card h4 {
+    color: white;
+}
+
 
 @media (max-width: 500px) {
     .card {
